@@ -1,0 +1,14 @@
+<h1>Enter a Rental Request (for a pussy)</h1>
+
+<form class="" action="index.html" method="post">
+<label for="cats">Select a Cat: </label>
+<select id="cats" name="@cat_rental_requests[cat_id]">
+  <option></option>
+  <%Cat.all.each do |cat| %>
+    <option value="<%=cat.id%>"><%=cat.name%></option>
+   <%end%>
+</select>
+
+
+<input type="submit" value="SUbmiT Requetss">
+</form>

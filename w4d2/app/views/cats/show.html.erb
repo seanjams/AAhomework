@@ -1,0 +1,21 @@
+<h1><%=@cat.name%></h1>
+
+<img src="https://thedailytripblog.files.wordpress.com/2013/05/2cat.jpg" width="25%" height="25%" alt="sports-kitty">
+
+<table>
+  <colgroup span="2"></colgroup>
+  <tr>
+    <th>Birthdate:</th><td><%=@cat.birth_date%></td>
+  </tr>
+  <tr>
+    <th>Name:</th><td><%=@cat.name%></td>
+  </tr>
+  <tr>
+    <th>Sex:</th><td><%=@cat.sex%></td>
+  </tr>
+  <tr>
+    <th>Color:</th><td><%=@cat.color%></td>
+  </tr>
+</table>
+
+<p><%="Description: #{@cat.description}"%></p>

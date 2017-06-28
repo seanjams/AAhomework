@@ -1,0 +1,49 @@
+<% if action == :edit %>
+  <% action_url = cat_url(cat)%>
+<% else %>
+  <% action_url = cats_url%>
+<% end %>
+
+<form action= '<%= action_url %>' method="post">
+  <% if action == :edit %>
+    <input type="hidden" name="_method" value="patch">
+  <%end%>
+
+  <label for="name">Name: </label>
+  <input type="text" id="name" name="cat[name]" value="<% cat.name %>" >
+
+  <br><br>
+
+  <label for="color">Color: </label>
+  <select id="color" name="cat[color]">
+    <option disabled <%= cat.color ? "" : "selected" %>>-- Please Select Color --</option>
+    <option value="bluegold" <%= cat.color == 'bluegold' ? "selected": "" %>>BlueGold</option>
+    <option value="black" <%= cat.color == 'black' ? "selected": "" %>>Black</option>
+    <option value="red" <%= cat.color == 'red' ? "selected": "" %>>Red</option>
+    <option value="fiftyshadesofgrey" <%= cat.color == 'fiftyshadesofgrey' ? "selected": "" %>>Fifty Shades of Grey</option>
+    <option value="fluffy" <%= cat.color == 'fluffy' ? "selected": "" %>>Fluffy?</option>'
+  </select>
+
+  <br><br>
+
+  <label for="sex">Sex (plz): </label>
+  <input type="radio" name='cat[sex]' value="M"> Male
+  <input type="radio" name='cat[sex]' value="F"> Female
+
+  <br>
+  <br>
+
+  <label for="date">Enter Birthday: </label>
+  <input type="date" id="date" name="cat[birth_date]" value"<%= Time.now.to_date %>">
+
+  <br>
+
+  <label for="description">Cat Description: </label>
+  <textarea name="cat[description]" id="description" rows="8" cols="80">
+    <%= cat.description %>
+  </textarea>
+
+  <br><br>
+
+  <input type="submit" value="<%= action == :edit ? 'Cat Upgrade!' : 'Create New Pussy'%>">
+</form>
