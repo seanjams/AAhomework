@@ -119,7 +119,7 @@ function subsets(arr) {
   let result = [[]];
   if (arr.length === 0) {return result;}
   // if (arr.length === 1) {return [arr]}
-
+debugger
   let oldSets = subsets(arr.slice(1));
   let first = [arr[0]];
   let newSets = oldSets.map((subset) => {
@@ -132,3 +132,5 @@ function subsets(arr) {
   // console.log(oldSets.concat(newSets));
   return oldSets.concat(newSets);
 }
+
+console.log(subsets([1,3,5,6]));
