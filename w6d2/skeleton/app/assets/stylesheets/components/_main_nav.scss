@@ -1,27 +1,43 @@
 .main-nav {
-
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid $light-gray;
 }
 
 .left-nav > ul,
 .right-nav > ul {
-
+  display: flex;
+  align-items: center;
 }
 
 .left-nav > ul > li {
-
+  font-family: $sans-serif;
+  font-size: 12px;
+  text-transform: uppercase;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
 }
 
 .right-nav > ul > li {
-
+  font-family: $sans-serif;
+  font-size: 12px;
+  text-transform: uppercase;
+  padding: 6px 10px;
+  margin: 10px;
+  border-radius: 5px;
 }
 
 .right-nav > ul > li:last-of-type {
-
+  font-size: 20px;
+  transition: 0.2s linear;
 }
 
 .left-nav > ul > li:hover,
 .right-nav > ul > li:last-of-type:hover {
-
+  background: $lightest-gray;
+  transition: 0.2s linear;
 }
 
 .left-nav span {
