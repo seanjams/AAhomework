@@ -1,0 +1,24 @@
+.clock {
+  font-family: 'Limelight', cursive;
+  background-color: rgb(127, 163, 70);
+  width: 400px;
+  margin: 0 auto;
+  text-align: center;
+  border-radius: 25px;
+  padding-top: 10px;
+}
+
+.clock h1{
+  text-decoration: underline;
+}
+
+
+div.flexContainer {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+div.flexContainer div {
+  text-align: center;
+}
