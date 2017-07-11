@@ -1,0 +1,30 @@
+div#root {
+  padding-top: 70px;
+  display: flex;
+  justify-content: center;
+}
+
+div#board {
+  flex: 0.33;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  align-items: center;
+  padding: 20px;
+  border-radius: 20px;
+  border: 3px solid blue;
+  background-color: #3af;
+}
+
+div.row {
+  display: flex;
+  justify-conten  t: center;
+  align-items: center;
+}
+
+div.tile {
+  text-align: center;
+  width: 50px;
+  height: 50px;
+}
